@@ -30,7 +30,7 @@ class SelectableButton extends StatefulWidget {
 }
 
 class _SelectableButtonState extends State<SelectableButton> {
-  bool isSelected = false;
+  bool isSelected = true;
 
   String get buttonText => isSelected ? "Selected" : "Not selected";
   Color get textColor => isSelected ? Colors.white : Colors.black;
@@ -52,7 +52,7 @@ class _SelectableButtonState extends State<SelectableButton> {
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30), // Rounded corners
+            borderRadius: BorderRadius.circular(30),
           ),
         ),
         onPressed: selection,

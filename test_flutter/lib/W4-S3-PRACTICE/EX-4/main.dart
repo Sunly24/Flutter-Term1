@@ -61,7 +61,6 @@ class _ScoreCardState extends State<ScoreCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //height: 210,
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.symmetric(horizontal: 30),
       decoration: BoxDecoration(

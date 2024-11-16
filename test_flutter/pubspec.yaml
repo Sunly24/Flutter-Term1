@@ -63,6 +63,7 @@ flutter:
     - assets/W4-S1/firebase.png
     - assets/W4-S3/
     - assets/W4-S1/
+    - assets/W6-S1/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

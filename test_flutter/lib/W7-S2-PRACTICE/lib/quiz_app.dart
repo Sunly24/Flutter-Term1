@@ -24,6 +24,7 @@ class _QuizAppState extends State<QuizApp> {
   void onStart() {
     setState(() {
       quizState = QuizState.started;
+      submission.removeAnswers();
     });
   }
 

@@ -56,8 +56,44 @@ class _ExpenseFormState extends State<ExpenseForm> {
       date: _dateTime!,
       category: _category,
     );
-    widget.onCreated(expense);
 
+    if (title.isEmpty) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text('Invalid input'),
+              content: const Text("The title cannot be empty"),
+              actions: <Widget>[
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: const Text("Ok"))
+              ],
+            );
+          });
+      return;
+    }
+    if (amount < 0) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text('Invalid input'),
+              content: const Text("The amount shall be positive number"),
+              actions: <Widget>[
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: const Text("Ok"))
+              ],
+            );
+          });
+      return;
+    }
+    widget.onCreated(expense);
     // Close modal
     Navigator.pop(context);
   }
